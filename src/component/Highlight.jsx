@@ -32,11 +32,11 @@ export class Highlight extends Component {
     } else if (error) {
       return <h1>Error!</h1>;
     } else {
-      const { title, year, imageUrl, overview } = this.state.movie;
+      const { title, year, imgUrl, overview } = this.state.movie;
       return (
         <div>
           <h1>{title}</h1>
-          <img src={imageUrl} />
+          <img src={imgUrl} alt={title} width="200px" />
           <p>{year}</p>
           <p>{overview}</p>
           <button>favorite</button>
