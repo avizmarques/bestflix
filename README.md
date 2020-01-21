@@ -42,3 +42,7 @@ Beginner steps.
 Intermidiate steps.
 
 1. There is a search bar with a button. When you press the search button you will aquire 10 movie items from the OMDB. => There are more options. Search on categorie or pagination.
+
+## API Documentation
+
+https://developers.themoviedb.org/3/configuration/get-api-configuration
