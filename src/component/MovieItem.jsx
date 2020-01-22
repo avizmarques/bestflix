@@ -2,7 +2,6 @@ import React, { Component, Fragment } from "react";
 
 export class MovieItem extends Component {
   render() {
-    // const { title, year, imgUrl, overview } = this.state.movie;
     return (
       <Fragment>
         <div>
