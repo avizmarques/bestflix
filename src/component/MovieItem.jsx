@@ -1,38 +1,21 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 
 export class MovieItem extends Component {
-  state = {
-    loading: true,
-    error: false
-  };
-
-  componentDidMount() {
-    return fetch(
-      "https://api.themoviedb.org/3/discover/movie?api_key=b8bbda4fdff3d12c92a0ff51ac4cf6d9&sort_by=popularity.desc"
-    )
-      .then(res => res.json())
-      .then(info =>
-        this.setState({
-          loading: false,
-          movies: info.results.map(movie => ({
-            title: movie.title,
-            year: movie.release_date,
-            overview: movie.overview,
-            imgUrl: "https://image.tmdb.org/t/p/w500" + movie.poster_path
-          }))
-        })
-      );
-  }
-
   render() {
-    const { loading, error } = this.state;
-    if (loading) {
-      return <p>Loading...</p>;
-    } else if (error) {
-      return <p>Error!</p>;
-    } else {
-      return <p>Loaded!</p>;
-    }
+    // const { title, year, imgUrl, overview } = this.state.movie;
+    return (
+      <Fragment>
+        <div>
+          <h1>{this.props.title}</h1>
+          <img src={this.props.imgUrl} alt={this.props.title} width="200px" />
+          <p>{this.props.year}</p>
+          <p>{this.props.overview}</p>
+          <button>favorite</button>
+          <button>upvote</button>
+          <button>downvote</button>
+        </div>
+      </Fragment>
+    );
   }
 }
 
