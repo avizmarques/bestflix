@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import MovieItem from "./MovieItem";
+import "./css/Categorie.css";
 
 export class Categorie extends Component {
   state = {
@@ -48,7 +49,11 @@ export class Categorie extends Component {
     } else if (error) {
       return <p>Error!</p>;
     } else {
-      return this.showMovieItems(this.state.movies);
+      return (
+        <div className="Categorie">
+          {this.showMovieItems(this.state.movies)}
+        </div>
+      );
     }
   }
 }

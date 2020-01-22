@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./css/Highlight.css";
 
 export class Highlight extends Component {
   state = {
@@ -34,7 +35,7 @@ export class Highlight extends Component {
     } else {
       const { title, year, imgUrl, overview } = this.state.movie;
       return (
-        <div>
+        <div className="highlight">
           <h1>{title}</h1>
           <img src={imgUrl} alt={title} width="200px" />
           <p>{year}</p>
