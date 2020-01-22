@@ -6,6 +6,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
+      <h1>Batflix</h1>
       {/* SearchBar */}
       <Highlight />
       {/* Highlight Should have 1 movie displayed.  */}

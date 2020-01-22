@@ -1,0 +1,10 @@
+.MovieItem {
+  background-color: white;
+  max-width: 300px;
+  text-align: center;
+  padding: 20px;
+}
+
+.title {
+  font-family: "Roboto Mono", monospace;
+}
